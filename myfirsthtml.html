@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>BMI</title>
+    <!--title that is shown in the browser tab -->
+    <link rel="stylesheet" href="style.css">
+    <!--style and scripts are outsourced to make it clean-->
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+
+
+    <div class="header">
+        <h1 class="headline"> BMI Rechner - BodyMassIndex </h1>
+    </div>
+    <!--making three links spreaded over the navigation bar-->
+    <div class="topnav">
+        <div class="topnav-right">
+            <a href="#link1">Ü🇧🇪🇷 🇩🇪🇳 🇧🇲🇮</a>
+        </div>
+        <div class="topnav-centered">
+            <a href="#link2" class="active">🔢 Dein BMI!</a>
+        </div>
+        <a href="#link4">🍎 🇷🇪🇿🇪🇵🇹🇪 </a>
+        <a href="#link3">⚽ ꜱᴩᴏʀᴛ </a>
+    </div>
+
+    <br />
+    <a href="#footer">hier gibt's mehr BMI Rechner</a>
+
+    <br />
+
+    <!--devide page into three parts-->
+    <div class="row">
+        <a name="link4"></a>
+        <div class="column">
+            <div class="card">
+                <h2 class="headline">Gesunde Rezepte</h2>
+                <img class="column image" src="./pics/recept.jpg" alt="rezept">
+                <p>
+                    <a href=https://www.lecker.de/schnelle-gesunde-gerichte-fuer-jeden-tag-71294.html>HIER geht es zu
+                        gesunden Rezepten!</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="column">
+            <a name="link2"></a>
+            <img class="column image" src="./pics/balance.jpg" alt="balance">
+            <div class="card">
+
+                <label for=" weight">Your weight in kg:</label>
+                <input class="input" type="number" id="weight" name="weight"><br><br>
+                <label for="height">Your height in m:</label>
+                <input type="number" id="height" name="height"><br><br>
+                <input id=button type="submit" value="Berechne deinen BMI">
+                <p id="result"></p>
+                <p id="result2"></p>
+                <script>myFunction();</script>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <a name="link3"></a>
+                <h2 class="headline">Sport-Tipps</h2>
+                <img class="column image" src="./pics/sport.jpg" alt="sport">
+                <p>
+                    <a href=https://www.hammer.de/fitnesswissen/trainingstipps/motivationstipps>HIER findest du Tipps
+                        zum
+                        Thema Sport!</a>
+                </p>
+                <br /> <!-- new line-->
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <br /> <!-- new line-->
+    <a name="link1"></a>
+    <h3>Was ist der BMI?</h3>
+
+    <p>
+        Der Body-Mass-Index, kurz BMI, ist die gebräuchlichste Formel zur Gewichtsberechnung. Er ergibt sich aus dem
+        Verhältnis des Körpergewichts in Kilogramm und der Körpergröße in Metern zum Quadrat. Je nach Höhe des
+        errechneten Werts unterscheidet die Deutsche Gesellschaft für Ernährung (DGE) für die Auswertung drei
+        Kategorien: Untergewicht, Normalgewicht und Übergewicht.</p>
+    <h3>Welche Aussagekraft hat der BMI?</h3>
+    <p>
+        
+
+
+        Der BMI ist ein Richtwert mit einigen Schwächen. Neben der fehlenden Berücksichtigung von Alter und Geschlecht
+        stößt der BMI vor allem auf Kritik, weil er lediglich die Körpermasse als Indikator für die Gesundheit zugrunde
+        legt und dabei nicht zwischen Fett- und Muskelmasse unterscheidet. Wer viel Sport treibt und damit auch viel
+        schwere Muskelmasse besitzt, kann mit der Berechnung des BMI fälschlicherweise als übergewichtig angesehen
+        werden.
+
+
+
+        Dennoch ist der BMI eine schnelle und einfache Methode, das eigene Körpergewicht einzuordnen. Neuen
+        wissenschaftlichen Daten zufolge scheint neben dem BMI vor allem der Bauchumfang nützlich zu sein, um die
+        Gesundheitsgefährdung durch Übergewicht besser einzuschätzen. Daneben gibt es weitere Methoden, um das
+        Normalgewicht zu berechnen.</p>
+        
+    <a name="footer"></a>
+    <div class="footer">
+        Hier findest du weitere BMI Rechner:
+        <a href=https://www.tk.de/service/app/2002866/bmirechner/bmirechner.app>TK-BMI-Rechner</a>
+        <a href=https://www.apotheken-umschau.de/bmi-rechner>Apotheken-Umschau-BMI-Rechner</a>
+        <a href=https://www.edeka.de/ernaehrung/tests-rechner/bmi-koepergewicht-pruefen/index.jsp>EDEKA BMI Rechner</a>
+
+    </div>
+
+
+</body>
+
+
+</html>
