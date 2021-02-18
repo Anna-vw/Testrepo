@@ -1,2 +1,2 @@
 # Testrepo
-Testrepo for helpbar and mardown
+Testrepo for helpbar and markdown
