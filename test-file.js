@@ -1,1 +1,3 @@
-some content dion't care
+function msg(){  
+ alert("Hello Javatpoint");  
+}  
