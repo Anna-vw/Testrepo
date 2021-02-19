@@ -13,6 +13,6 @@ jobs:
         with:
           args: |
             -s
-            -o index.html
+            -o index
             input.txt
            
