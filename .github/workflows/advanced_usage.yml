@@ -9,6 +9,7 @@ jobs:
       - uses: actions/checkout@v2
      
       - run: |
+          ls
           echo "Lorem ipsum" > lorem_1.md  # create two example files
           echo "dolor sit amet" > lorem_2.md
           mkdir output  # create output dir
@@ -21,3 +22,5 @@ jobs:
         with:
           name: output
           path: output
+      - run: |
+          ls
