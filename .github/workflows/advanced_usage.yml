@@ -7,11 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - env: 
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
       - run: |
           echo "Lorem ipsum" > lorem_1.md  # create two example files
           echo "dolor sit amet" > lorem_2.md
           mkdir output  # create output dir
           # this will also include README.md
+          env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
           echo "::set-env name=FILELIST::$(printf '"%s" ' *.md)"
       - uses: docker://pandoc/latex:2.9
         with:
