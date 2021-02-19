@@ -10,6 +10,6 @@ jobs:
       - uses: docker://pandoc/core:2.9
         with:
           args: |
-            --standalone
-            --output=index.html
+            -s
+            -o=index.html
             input.txt
