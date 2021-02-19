@@ -6,7 +6,9 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-18.04
     steps:
+      - uses: actions/checkout@v2
       - run: echo "foo" > /github/workspace/input.txt  
+      - run: ls
       - uses: docker://pandoc/core:2.9
         with:
           args: |
