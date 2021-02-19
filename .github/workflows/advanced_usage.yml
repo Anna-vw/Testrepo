@@ -19,10 +19,12 @@ jobs:
       - uses: docker://pandoc/latex:2.9
         with:
             args: --output=output/result.html README.md
-      - uses: actions/upload-artifact@master
+      - uses: actions/download-artifact@v2
         with:
           name: output
-          path: output
-      - run: |
-          cd output
-          ls
+          path: output   
+      - name: Display structure of downloaded files
+        run: ls -R
+          
+          
+
