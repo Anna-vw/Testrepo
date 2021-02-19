@@ -23,4 +23,5 @@ jobs:
           name: output
           path: output
       - run: |
+          cd output
           ls
