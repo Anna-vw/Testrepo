@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - run: echo "foo" > /github/workspace/input.txt  
+      - run: echo "foo" > input.txt  
       - run: ls
       - uses: docker://pandoc/core:2.9
         with:
