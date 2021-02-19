@@ -9,7 +9,7 @@ jobs:
       - run: echo "foo" > input.txt  
       - uses: docker://pandoc/core:2.9
         with:
-          args: |>  
+          args: |
             --standalone
             --output=index.html
             input.txt
