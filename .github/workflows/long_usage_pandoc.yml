@@ -11,5 +11,5 @@ jobs:
         with:
           args: |
             -s
-            -o=index.html
+            -o index.html
             input.txt
