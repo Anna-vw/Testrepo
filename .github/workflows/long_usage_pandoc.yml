@@ -6,11 +6,11 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-18.04
     steps:
-      - run: echo "foo" > input.txt  
+      - run: echo "foo" > /github/workspace/input.txt  
       - uses: docker://pandoc/core:2.9
         with:
           args: |
-            input.txt
             -s
             -o index.html
+            input.txt
            
