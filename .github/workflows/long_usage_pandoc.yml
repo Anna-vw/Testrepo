@@ -11,8 +11,5 @@ jobs:
       - run: ls
       - uses: docker://pandoc/core:2.9
         with:
-          args: |
-            -s
-            -o index
-            input.txt
+          args: input.txt
            
