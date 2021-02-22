@@ -14,11 +14,11 @@ jobs:
           echo "dolor sit amet" > lorem_2.md
           mkdir output  # create output dir
           # this will also include README.md
-          echo "::set-env name=FILELIST::$(printf '"%s" ' *.md)" >> $GITHUB_ENV
+          echo "name=FILELIST::$(printf '"%s" ' *.md)" >> $GITHUB_ENV
           # for f in {{ env.FILELIST }}; do 
       - uses: docker://pandoc/latex:2.9
         with:
-            args: --output=output/iwaas.html ${{ env.FILELIST }}
+            args: --output=output/${{ env.FILELIST }}.html ${{ env.FILELIST }}
       - uses: actions/upload-artifact@master
         with:
           name: output
