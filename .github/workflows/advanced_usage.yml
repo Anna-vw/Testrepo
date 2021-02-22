@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: echo "::set-env name=FILELIST::$(printf '%s' *.md)"
+      - run: echo "name=FILELIST::$(printf '%s' *.md)" >> $GITHUB_ENV
       - run: |
           ls
           echo "Lorem ipsum" > lorem_1.md  # create two example files
