@@ -18,7 +18,7 @@ jobs:
           # for f in {{ env.FILELIST }}; do 
       - uses: docker://pandoc/latex:2.9
         with:
-            args: --output=output/result.html ${{ env.action_state }}
+            args: --output=output/result.html ${{ env.FILELIST }}
       - uses: actions/upload-artifact@master
         with:
           name: output
