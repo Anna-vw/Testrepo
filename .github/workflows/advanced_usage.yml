@@ -10,6 +10,7 @@ jobs:
      
       - run: |
           ls
+          find . -name '*.md' -print
           echo "Lorem ipsum" > lorem_1.md  # create two example files
           echo "dolor sit amet" > lorem_2.md
           mkdir output  # create output dir
@@ -18,7 +19,7 @@ jobs:
           # for f in {{ env.FILELIST }}; do 
       - uses: docker://pandoc/latex:2.9
         with:
-            args: --output=output/result.html ${{ env.FILELIST }}
+            args: --output=output/${{env.FILELIST}}.html ${{ env.FILELIST }}
       - uses: actions/upload-artifact@master
         with:
           name: output
