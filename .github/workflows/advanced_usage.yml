@@ -19,11 +19,8 @@ jobs:
           ls
           echo "Lorem ipsum" > lorem_1.md  # create two example files
           echo "dolor sit amet" > lorem_2.md
-          mkdir output  # create output dir
-          # this will also include README.md
-          # echo "::set-envname= d*.md::$(printf ‘%s ' *.md)”
-          # print ${{ env.d*.md }}
-          # for f in {{ env.FILELIST }}; do 
+          mkdir output
+         
       - uses: docker://pandoc/latex:2.9
         with:
             args: --output=output/${{ env.FILELIST }}.html ${{ env.FILELIST }}
