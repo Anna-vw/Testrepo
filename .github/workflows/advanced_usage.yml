@@ -22,7 +22,7 @@ jobs:
           mkdir output  # create output dir
           # this will also include README.md
           echo "name=FILELIST::$(printf '"%s" ' *.md)" >> $GITHUB_ENV
-          print env.FILELIST
+          print ${{ env.FILELIST }}
           # for f in {{ env.FILELIST }}; do 
       - uses: docker://pandoc/latex:2.9
         with:
