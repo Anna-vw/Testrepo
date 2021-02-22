@@ -21,8 +21,8 @@ jobs:
           echo "dolor sit amet" > lorem_2.md
           mkdir output  # create output dir
           # this will also include README.md
-          #echo "::set-envname= d*.md::$(printf ‘%s ' *.md)”
-          #print ${{ env.d*.md }}
+          # echo "::set-envname= d*.md::$(printf ‘%s ' *.md)”
+          # print ${{ env.d*.md }}
           # for f in {{ env.FILELIST }}; do 
       - uses: docker://pandoc/latex:2.9
         with:
