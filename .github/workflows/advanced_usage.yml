@@ -13,7 +13,7 @@ jobs:
             echo "dolor sit amet" > lorem_2.md
             mkdir output  # create output dir
             ls *.md > files
-            mapfile -t myArray < file
+            mapfile -t myArray < files
         - uses: docker://pandoc/latex:2.9 
           with:
             args: --output=output/output.html -f markdown myArray
