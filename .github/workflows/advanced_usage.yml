@@ -12,11 +12,11 @@ jobs:
             echo "Lorem ipsum" > lorem_1.md  # create two example files
             echo "dolor sit amet" > lorem_2.md
             mkdir output  # create output dir
-            ls *.txt > files
+            ls *.md > files
             mapfile -t myArray < file
         - uses: docker://pandoc/latex:2.9 
           with:
-            args: --output=output/output.html myArray
+            args: --output=output/output.html -f markdown myArray
 
   
         - uses: actions/upload-artifact@master
