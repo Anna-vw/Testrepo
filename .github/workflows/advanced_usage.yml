@@ -17,7 +17,8 @@ jobs:
           ls *.md > filelist
           
       - uses: docker://pandoc/latex:2.9 
-      - run: for f in *.md;  do pandoc -v; done;
+        with:
+          args: for f in *.md;  do pandoc -v; done;
         
   
       - uses: actions/upload-artifact@master
