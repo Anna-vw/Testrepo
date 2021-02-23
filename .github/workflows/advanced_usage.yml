@@ -13,10 +13,10 @@ jobs:
           mkdir output  # create output dir
           # this will also include README.md
           echo "name=FILELIST::$(printf '"%s" ' *.md)">>$GITHUB_ENV
-          env
+          ( set -o posix ; set ) | less
       - uses: docker://pandoc/latex:2.9
         with:
-          args: --output=output/result.html -t html -f markdown README.md
+          args: --output=output/result.html -t html -f markdown $FILELIST 
       - uses: actions/upload-artifact@master
         with:
           name: output
