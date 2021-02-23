@@ -2,6 +2,7 @@ name: Advanced Usage
 
 on: push
 
+
 jobs:
   preprocessing:
     runs-on: ubuntu-latest
@@ -13,19 +14,10 @@ jobs:
             mkdir output  # create output dir
             ls *.txt > files
             mapfile -t myArray < file
-        
-  loop:
-    runs-on: ubuntu-latest
-    needs: preprocessing
-    strategy:
-       matrix:
-         filelist: myArray
-         
-    steps:
         - uses: docker://pandoc/latex:2.9 
           with:
             args: -v
-        
+
   
         - uses: actions/upload-artifact@master
           with:
