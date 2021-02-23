@@ -16,7 +16,7 @@ jobs:
           env
       - uses: docker://pandoc/latex:2.9
         with:
-          args: --output=output/result.pdf $FILELIST
+          args: --output=output/result.html -t html -f markdown $FILELIST
       - uses: actions/upload-artifact@master
         with:
           name: output
