@@ -13,10 +13,11 @@ jobs:
         
     steps:
       - uses: actions/checkout@v2
+      - run: mkdir output
         
       - uses: docker://pandoc/latex:2.9 
         with:
-          args: -t html -f markdown  ${{ matrix.files }}
+          args: --output=output/output.html  -t html -f markdown  ${{ matrix.files }}
 
   
       - uses: actions/upload-artifact@master
