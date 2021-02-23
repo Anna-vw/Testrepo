@@ -3,8 +3,17 @@ name: Advanced Usage
 on: push
 
 jobs:
+  loopcheck:
+    strategy:
+      matrix:
+        filelist: [README.md]
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: |
+          echo ${{ matrix.filelist }}.md
   convert_via_pandoc:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: |
@@ -13,12 +22,11 @@ jobs:
           mkdir output  # create output dir
           # this will also include README.md
           echo "name=FILELIST::$(printf '"%s" ' *.md)">>$GITHUB_ENV
-          ls *.md
-          ls *.md > filelist
+          echo ${{ matrix.filelist }}.md
           
       - uses: docker://pandoc/latex:2.9 
         with:
-          args: for f in *.md;  do pandoc -v; done;
+          args: -v
         
   
       - uses: actions/upload-artifact@master
