@@ -3,29 +3,36 @@ name: Advanced Usage
 on: push
 
 jobs:
-  convert_via_pandoc:
-    strategy:
-      matrix:
-        filelist: [README.md]
+  preprocessing:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: |
-          echo "Lorem ipsum" > lorem_1.md  # create two example files
-          echo "dolor sit amet" > lorem_2.md
-          mkdir output  # create output dir
-          # this will also include README.md
-          echo "name=FILELIST::$(printf '"%s" ' *.md)">>$GITHUB_ENV
-          echo ${{ matrix.filelist }}
-          
-      - uses: docker://pandoc/latex:2.9 
-        with:
-          args: -v
+        - uses: actions/checkout@v2
+        - run: |
+            echo "Lorem ipsum" > lorem_1.md  # create two example files
+            echo "dolor sit amet" > lorem_2.md
+            mkdir output  # create output dir
+            ls *.txt > files
+            mapfile -t myArray < file
+        
+  loop:
+    runs-on: ubuntu-latest
+    needs: preprocessing
+    strategy:
+       matrix:
+         filelist: myArray
+         
+  convert_via_pandoc:
+    needs: loop
+    runs-on: ubuntu-latest
+    steps:
+        - uses: docker://pandoc/latex:2.9 
+          with:
+            args: -v
         
   
-      - uses: actions/upload-artifact@master
-        with:
-          name: output
-          path: output
+        - uses: actions/upload-artifact@master
+          with:
+            name: output
+            path: output
               
        
