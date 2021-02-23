@@ -9,7 +9,7 @@ jobs:
     
     strategy:
       matrix:
-        files: [README.md]
+        files: [README.md, welcome.md]
         
     steps:
       - uses: actions/checkout@v2
