@@ -15,7 +15,7 @@ jobs:
           echo "set_env name=FILELIST::$(printf '"%s" ' *.md)">>$GITHUB_ENV
           ls *.md
           ls *.md > filelist
-          for f in *.md;  do 
+          for f in *.md;  do  [
           
           - uses: docker://pandoc/latex:2.9
             with:
@@ -24,6 +24,7 @@ jobs:
             with:
               name: output
               path: output
-          ;
+              
+          ];
           done;
  
