@@ -12,7 +12,9 @@ jobs:
           echo "dolor sit amet" > lorem_2.md
           mkdir output  # create output dir
           # this will also include README.md
-          echo "name=FILELIST::$(printf '"%s" ' *.md)">>$GITHUB_ENV
+          echo "set_env name=FILELIST::$(printf '"%s" ' *.md)">>$GITHUB_ENV
+          ls *.md
+          ls *.md > filelist
           echo $FILELIST 
           ( set -o posix ; set ) | less
       - uses: docker://pandoc/latex:2.9
