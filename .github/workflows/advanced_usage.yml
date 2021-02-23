@@ -15,7 +15,10 @@ jobs:
           echo "set_env name=FILELIST::$(printf '"%s" ' *.md)">>$GITHUB_ENV
           ls *.md
           ls *.md > filelist
-          for f in *.md;  do uses: docker://pandoc/latex:2.9 --output=output/result.html -t html -f markdown ${f} ]; done;
+          
+      - uses: docker://pandoc/latex:2.9 
+      - run: for f in *.md;  do pandoc -v; done;
+        
   
       - uses: actions/upload-artifact@master
         with:
