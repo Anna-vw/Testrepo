@@ -16,7 +16,7 @@ jobs:
             mapfile -t myArray < file
         - uses: docker://pandoc/latex:2.9 
           with:
-            args: -v
+            args: --output=output/output.html myArray
 
   
         - uses: actions/upload-artifact@master
