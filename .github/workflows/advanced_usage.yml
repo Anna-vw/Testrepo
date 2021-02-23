@@ -6,22 +6,22 @@ on: push
 jobs:
   preprocessing:
     runs-on: ubuntu-latest
-    steps:
-        - uses: actions/checkout@v2
-        - run: |
-            echo "Lorem ipsum" > lorem_1.md  # create two example files
-            echo "dolor sit amet" > lorem_2.md
-            mkdir output  # create output dir
-            ls *.md > files
+    
+    strategy:
+      matrix:
+        files: [README.md]
         
-        - uses: docker://pandoc/latex:2.9 
-          with:
-            args: --output=output/output.html -f markdown --list-input-formats files
+    steps:
+      - uses: actions/checkout@v2
+        
+      - uses: docker://pandoc/latex:2.9 
+        with:
+          args: --output=output/output.html -f markdown  files
 
   
-        - uses: actions/upload-artifact@master
-          with:
-            name: output
-            path: output
+      - uses: actions/upload-artifact@master
+        with:
+          name: output
+          path: output
               
        
