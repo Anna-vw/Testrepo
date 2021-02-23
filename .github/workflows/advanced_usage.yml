@@ -17,7 +17,7 @@ jobs:
         
       - uses: docker://pandoc/latex:2.9 
         with:
-          args: --output=output/  -t html -f markdown  ${{ matrix.files }}
+          args: --output=output/${{ matrix.files }}.html  -t html -f markdown  ${{ matrix.files }}
 
   
       - uses: actions/upload-artifact@master
