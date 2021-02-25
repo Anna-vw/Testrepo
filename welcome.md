@@ -2,6 +2,8 @@
   <img src="LoyJoyLogoGif.gif" alt="LoyJoy Logo" title="LoyJoy Animated Logo"/>
 </p>
 
+![image3](LoyJoyLogoGif.gif)
+
 
 # Get started with the Conversational Marketing Cloud
 We are excited to have you on board of the LoyJoy Conversation Marketing Cloud! Very soon you will be able to build your awesome customer journeys yourself. Let’s get started!
