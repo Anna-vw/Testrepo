@@ -1,6 +1,5 @@
-<p align="center">
-  <img src="LoyJoyLogoGif.gif" alt="LoyJoy Logo" title="LoyJoy Animated Logo"/>
-</p>
+<img src="LoyJoyLogoGif.gif"/>
+
 
 ![LoyJoyLogoGif](LoyJoyLogoGif.gif)
 
