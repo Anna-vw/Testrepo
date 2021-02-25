@@ -1,4 +1,4 @@
-<img src="LoyJoyLogoGif.gif"/>
+<img src="https://github.com/Anna-vw/Testrepo/blob/main/LoyJoyLogoGif.gif"/>
 
 
 ![LoyJoyLogoGif](LoyJoyLogoGif.gif)
