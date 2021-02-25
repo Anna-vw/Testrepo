@@ -1,7 +1,7 @@
 <img src="https://github.com/Anna-vw/Testrepo/blob/main/LoyJoyLogoGif.gif"/>
 
 
-![LoyJoyLogoGif](LoyJoyLogoGif.gif)
+![LoyJoyLogoGif](LoyJoyLogoGif.gif | | width=100)
 
 
 # Get started with the Conversational Marketing Cloud
