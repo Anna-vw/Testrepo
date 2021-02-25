@@ -2,7 +2,7 @@
   <img src="LoyJoyLogoGif.gif" alt="LoyJoy Logo" title="LoyJoy Animated Logo"/>
 </p>
 
-![image3](LoyJoyLogoGif.gif)
+![LoyJoyLogoGif](LoyJoyLogoGif.gif)
 
 
 # Get started with the Conversational Marketing Cloud
