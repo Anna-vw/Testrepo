@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="LoyJoyLogoGif.gif" alt="LoyJoy Logo" title="LoyJoy Animated Logo" width="200"/>
+  <img src="LoyJoyLogoGif.gif" alt="LoyJoy Logo" title="LoyJoy Animated Logo"/>
 </p>
 
 
